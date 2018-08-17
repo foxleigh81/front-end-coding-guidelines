@@ -67,8 +67,8 @@ An empty component should have an index.vue file that looks like this:
 <template>
   <!-- // Component HTML goes here -->
 </template>
-<script src="./scripts.js" />
-<styles lang="scss" src="./styles.scss" scoped />
+<script src="./scripts.js"></script>
+<style lang="scss" src="./styles.scss" scoped></style>
 ```
 
 ## Coding styles
