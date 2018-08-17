@@ -1,37 +1,47 @@
-# Coding standards document for Project NELSON
+# Project NELSON Front End Coding Standards
 
 ## Getting started
 
-This project is built using the following technologies
+This project is built using the following technologies:
 
-- [Node](https://nodejs.org/)
+- [ES2015+ (Babel)](https://babeljs.io/)
+- [SASS](https://sass-lang.com/)
 - [Vue](https://vuejs.org/)
+- [Vuex](https://vuex.vuejs.org/)
 - [Nuxt](https://nuxtjs.org/)
 - [Apollo](https://www.apollographql.com/)
-- [Vuex](https://vuex.vuejs.org/)
-- [Express](https://expressjs.com/)
 - [Flow](https://flow.org/en/docs/)
 - [Jest](https://jestjs.io/)
-- [Nightwatch](http://nightwatchjs.org/)
-- [Selenium](https://www.seleniumhq.org/)
+- [Puppeteer](https://github.com/GoogleChrome/puppeteer)
 
-To get started, simply clone the repository on to your machine and install the dependencies
- 
-```bash
-$ git clone [whatever the hell the repo is]
-$ cd repo
+To get started, simply clone the repository on to your machine and install the dependencies.
+
+
+``` bash
+# install dependencies
 $ npm install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm run start
+
+# generate static project
+$ npm run generate
+
+# run tests
+$ npm run test
+
+# run tests in watch mode
+$ npm run test:watch
+
+# regenerate test snapshots
+$ npm run test -u
 ```
 
- > ⚠️ Please do not use Yarn as it is not supported
-
-One this is done you can run the project in development mode by running `npm run dev`.
-
-### Running tests
-
-In order to run e2e tests you will need to install the seleniu webdrivers, more information can be found [here](https://www.npmjs.com/package/nightwatch)
-
-<!-- TODO: Add information about running tests -->
+ > ⚠️ Only NPM should be used for dependency management. There currently are issues with NPM and Yarn generating mismatched lock files. 
 
 ## Directory Structure
 
@@ -79,17 +89,27 @@ There is little point in writing any specific documentation for JavaScript code 
 Here is a link to that ruleset: https://standardjs.com/
 
 #### Type checking
-<!-- [Note to Tom] I'm happy to use Flow or TS here, my preference would be Flow as I've used it before and find it fairly straightforward. -->
-
-We use FlowJS for type checking, if you are unfamiliar with this, please review the docs at the link below
+We use FlowJS for type checking, if you are unfamiliar with this, please review the docs at the link below:
 
 https://flow.org/en/docs/
 
-#### Unit tests
-<!-- [Note to Tom] I'll leave this bit to you as I've only used Jest here and there -->
+#### Unit testing
+Jest is being used for unit testing. All tests can be found within the project root in the `__tests__` directory. 
+
+Component tests will be performed with the aid of the `vue-test-utils` library. Testing of the internal implementation detail of a component should be avoided instead focussing on the public interface:
+
+https://vue-test-utils.vuejs.org/
+
+Each presentational component should also include a Jest snapshot for regression testing:
+
+https://jestjs.io/docs/en/snapshot-testing
+
+Mocks should be created in a `__mocks__` directory and placed adjacent to the module being mocked with a matching filename.
 
 #### E2E tests
-<!-- [Note to Tom] Same as above, I've used Nightwatch a bit here and there so I'm fairly familiar with it, I'd like to use that ideally but if you have a preference, I'm all ears :) -->
+E2E testing will be achivied by using a combination of Jest and Puppeeteer. Puppeteer is a Node library which provides a high-level API to control Chrome or Chromium over the DevTools Protocol.
+
+https://github.com/GoogleChrome/puppeteer
 
 ### HTML (.vue, .html)
 
