@@ -43,7 +43,7 @@ $ npm run test -u
 
  > ⚠️ Only NPM should be used for dependency management. There currently are issues with NPM and Yarn generating mismatched lock files. 
 
-## Directory Structure
+## Directory structure
 
 Our Directory structure follows the pattern set by Nuxt so we will not repeat it here, for more information visit: https://nuxtjs.org/guide/directory-structure
 
