@@ -2,18 +2,6 @@
 
 ## Getting started
 
-This project is built using the following technologies:
-
-- [ES2015+ (Babel)](https://babeljs.io/)
-- [SASS](https://sass-lang.com/)
-- [Vue](https://vuejs.org/)
-- [Vuex](https://vuex.vuejs.org/)
-- [Nuxt](https://nuxtjs.org/)
-- [Apollo](https://www.apollographql.com/)
-- [Flow](https://flow.org/en/docs/)
-- [Jest](https://jestjs.io/)
-- [Puppeteer](https://github.com/GoogleChrome/puppeteer)
-
 To get started, simply clone the repository on to your machine and install the dependencies.
 
 
@@ -42,6 +30,18 @@ $ npm run test -u
 ```
 
  > ⚠️ Only NPM should be used for dependency management. There currently are issues with NPM and Yarn generating mismatched lock files. 
+
+## Key technologies
+
+- [ES2015+ (Babel)](https://babeljs.io/)
+- [SASS](https://sass-lang.com/)
+- [Vue](https://vuejs.org/)
+- [Vuex](https://vuex.vuejs.org/)
+- [Nuxt](https://nuxtjs.org/)
+- [Apollo](https://www.apollographql.com/)
+- [Flow](https://flow.org/en/docs/)
+- [Jest](https://jestjs.io/)
+- [Puppeteer](https://github.com/GoogleChrome/puppeteer)
 
 ## Directory structure
 
